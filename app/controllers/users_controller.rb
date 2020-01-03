@@ -13,6 +13,11 @@ class UsersController < ApplicationController
     User.create(user_params)
   end
 
+  # 詳細情報を表示するためのアクション
+  def show
+    @user = User.find(params[:id])
+  end
+
   # 編集を行うためのアクション
   def edit
     @user = User.find(params[:id])
@@ -33,6 +38,6 @@ class UsersController < ApplicationController
   private
 
   def user_params
-    params.require(:user).permit(:name, :age)
+    params.require(:user).permit(:name, :age, :birth_place, :special_skill)
   end
 end
