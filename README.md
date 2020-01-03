@@ -1,1 +1,1 @@
-resourcesを使わないCRUDアプリを作成
+resourcesを使用したCRUDアプリを作成
